@@ -18,6 +18,8 @@
     [super viewDidLoad];
     NSString *reversedString = [self reverseThisString:@"abcd"];
     NSLog(@"%@",reversedString);
+    NSLog(@"%d",[self isPalindrome:@"abc"]);
+    
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -43,6 +45,19 @@
     return reversedStr;
     
 }
+
+-(BOOL)isPalindrome:(NSString *)string{
+    NSInteger len = [string length];
+    for (int i = 0; i < len/2; i++) {
+        if ([string characterAtIndex:i] != [string characterAtIndex:len-1-i]) {
+            return NO;
+        }
+        
+    }
+    return YES;
+    
+}
+
 
 
 @end

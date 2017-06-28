@@ -11,5 +11,9 @@
 @interface ViewController : UIViewController
 
 
+-(BOOL)isPalindrome:(NSString *)string;
+-(NSString *)reverseThisString:(NSString *)stringToReverse;
+
+
 @end
 
